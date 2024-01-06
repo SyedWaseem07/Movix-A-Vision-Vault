@@ -44,7 +44,7 @@ const Header = () => {
     const searchQueryHandler = (e) => {
         // Only calls api after type some content in search and hitting enter
         if (e.key === "Enter" && query.length > 0) {
-            navigator(`/search/${query}`);
+            navigate(`/search/${query}`);
             setTimeout(() => {
                 setShowSearch(false);
             }, 1000);
@@ -71,7 +71,9 @@ const Header = () => {
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
             <ContentWrapper>
                 <div className="logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo"
+                    onClick={() => navigate('/')}
+                    />
                 </div>
                 <ul className="menuItems">
                     <li className="menuItem" onClick={() =>navigationHandler('movie')}>Movies</li>

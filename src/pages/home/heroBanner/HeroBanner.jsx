@@ -22,7 +22,6 @@ const HeroBanner = () => {
 
         setBackground(bgImgLink);
 
-        console.log(bgImgLink);
     }, [data]);
 
     const searchQueryHandler = (e) => {
@@ -55,7 +54,11 @@ const HeroBanner = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                        <button>Search</button>
+                        <button
+                        // onClick={() => {
+                        //     query.length > 0 ? navigator(`/search/${query}`) : '';
+                        // }}
+                        >Search</button>
                     </div>
                 </div>
             </ContentWrapper>

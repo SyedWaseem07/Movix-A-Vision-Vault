@@ -19,6 +19,7 @@ const useFetch = (url) => {
             .catch((err) => { // Got Error 
                 setLoading(false);
                 setError("Something went wrong!");
+                alert("No network")
             });
     }, [url]);
 
