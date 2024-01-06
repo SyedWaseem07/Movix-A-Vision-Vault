@@ -26,13 +26,13 @@
         align-items: center;
         justify-content: space-between;
     }
-    .logo {
+    .logo {                             //Mobile => Desktop(height)
         cursor: pointer;
         img {
             height: 50px;
         }
     }
-    .menuItems {
+    .menuItems {                    // Desktop => mobile hide
         list-style-type: none;
         display: none;
         align-items: center;

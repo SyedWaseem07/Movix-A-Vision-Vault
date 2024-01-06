@@ -14,9 +14,15 @@ const HeroBanner = () => {
     const { url } = useSelector((state) => state.home);
 
     useEffect(() => {
-        const bgImgLink = url.backdrop + data?.results[Math.floor(Math.random() * 20)]?.backdrop_path;
-        console.log(typeof(url.backdrop));
-        if(url.backdrop !== undefined) setBackground(bgImgLink);
+        let firstHalf = url.backdrop === undefined ? "https://image.tmdb.org/t/p/original" : url.backdrop;
+
+        let secondHalf =  data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path === undefined ? "/50stq3Jlny6oEgJjsXbQvbajCNw.jpg" : data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+
+        let bgImgLink = firstHalf + secondHalf;
+
+        setBackground(bgImgLink);
+
+        console.log(bgImgLink);
     }, [data]);
 
     const searchQueryHandler = (e) => {
