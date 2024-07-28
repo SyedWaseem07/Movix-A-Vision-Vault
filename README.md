@@ -1,4 +1,4 @@
-# 🏥 Movix - A Vision Vault.
+# 🎬 Movix - A Vision Vault.
 
 ## Project Overview
 - Developed a rating web application for TV shows and movies.
